@@ -1,0 +1,25 @@
+import static org.mockito.Mockito.when;
+import static org.testng.Assert.assertEquals;
+
+import com.mlieshoff.testng.UnitTestBase;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.testng.annotations.Test;
+
+#parse("File Header.java")
+public class ${NAME} extends UnitTestBase {
+
+    @InjectMocks
+    private ${CLASS_NAME} unitUnderTest;
+
+    @Test
+    void method_when_then() throws Exception {
+        String expected = "expected";
+
+        String actual = unitUnderTest.foo();
+
+        assertEquals(actual, expected);
+    }
+
+    ${BODY}
+}

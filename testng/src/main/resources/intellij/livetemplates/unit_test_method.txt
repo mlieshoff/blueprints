@@ -1,0 +1,8 @@
+    @Test
+    void method_when_then() throws Exception {
+        String expected = "expected";
+
+        String actual = unitUnderTest.foo();
+
+        assertEquals(actual, expected);
+    }
